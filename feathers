@@ -1,18 +1,22 @@
-link: https://strudel.cc/#c2V0Q3BtKDE2MC80KQoKJGRydW1zOiBzdGFjayAoCiAgcygiYmQgYmQqMiBiZCBiZCIpLmdhaW4oMC41KSwKICAvL3MoImJkIGJkKjIgYmQgYmQvMiIpLmdhaW4oMC41KSwKICBzKCJbaGgqMiBoaCBoaCoyIGhoKjJdIiksCiAgLy9zKCJjcCIpLmJlYXQoIjgiLCAxNikKKS5vcmJpdCgyKS5fc2NvcGUoKS5scGYoNTAwMCkvLy5iYW5rKCJSb2xhbmRUUjkwOSIpCgokYmFzczogc3RhY2soCiAgcygic3VwZXJzYXchMTYiKS5ub3RlKCI8YyMzIGcjMiBjIzMgW2YyIGQjMl0%2BIikubHBmKDMwMCkub3JiaXQoNyksCiAgcygic3VwZXJzYXchOCIpLm5vdGUoIjxjIzIgZyMxIGMjMiBbZjEgZCMxXT4iKS5scGYoMzAwKS5nYWluKDAuNSksCikuX3BpYW5vcm9sbCgpCiRtZWw6IHN0YWNrKAogIG5vdGUoIjxbZCM2IGQjNl0gW2cjNSBnNV0gW2QjNiBkIzYgZCM2IGEjNV0gW2IjNSBhIzVdIFthIzUgYSM1IGEjNSBjNl0gW2cjNSBnNV0gW2QjNiBkIzZdIFtnIzUgZzVdID4iKS5zb3VuZCgic2F3dG9vdGgiKS5scGYoMzUwKS5vcmJpdCg3KSwKICBub3RlKCI8W1tkIzQgYzRdIFthIzQgYSM0XSBbZCM0IGM0XSBbZzQgZyM0XV0%2BIikubHBmKDYwMCkuZ2FpbigwLjUpCikuX3BpYW5vcm9sbCgpCgoK
+link: https://strudel.cc/#c2V0Q3BtKDE2MC80KQoKJGRydW1zOiBzdGFjayAoCiAgcygiYmQgYmQgYmQgYmQqMiIpLmJhbmsoIlJvbGFuZFRSOTA5IikuZ2FpbigxKS5kdWNrb3JiaXQoIjE6MyIpLAogIC8vcygiYmQgYmQqMiBiZCBiZC8yIikuZ2FpbigwLjUpLAogIHMoIltoaCoyIGhoIGhoKjIgaGgqMl0iKS5iYW5rKCJSb2xhbmRUUjgwOCIpLmdhaW4oMSksCiAgLy9zKCJjcCIpLmJlYXQoIjE2IiwgMzIpLmJhbmsoIlJvbGFuZFRSODA4IikKKS5vcmJpdCgyKS5fc2NvcGUoKS5scGYoNTAwMCkvLy5iYW5rKCJSb2xhbmRUUjgwOCIpCgokYmFzczogc3RhY2soCiAgcygic3VwZXJzYXchOCIpLm5vdGUoIjxjIzMgZyMyIGMjMyBbZjIgZCMyXT4iKS5scGYoMzAwKS5vcmJpdCg3KSwKICBzKCJzdXBlcnNhdyExNiIpLm5vdGUoIjxjIzIgZyMxIGMjMiBbZjEgZCMxXT4iKS5scGYoMzAwKS5nYWluKDEpLAopLl9waWFub3JvbGwoKQokbWVsOiBzdGFjaygKICAvL25vdGUoIjxbZCM2IGQjNl0gW2cjNSBnNV0gW2QjNiBkIzYgZCM2IGEjNV0gW2IjNSBhIzVdIFthIzUgYSM1IGEjNSBjNl0gW2cjNSBnNV0gW2QjNiBnNl0gW2cjNSBnNV0gPiIpLnNvdW5kKCJzYXd0b290aCIpLmxwZigzNTApLm9yYml0KDcpLAogIG5vdGUoIjxbW2QjNCBjNF0gW2EjNCBjNF0gW2QjNCBjNF0gW2c0IGcjNF1dPiIpLnMoInBpYW5vIikubHBmKDI1MCkuZ2FpbigwLjgpLl9zY29wZSgpLAogIC8vY2hhbmdlIGcjNCB0byAqMiwgZjUgZCM1Cikucm9vbSgiPDAgLjIgLjQgLjYgLjggMT4iKS5fcGlhbm9yb2xsKCkKCgo%3D
+
 setCpm(160/4)
 
 $drums: stack (
-  s("bd bd*2 bd bd").gain(0.5),
+  s("bd bd bd bd*2").bank("RolandTR909").gain(1).duckorbit("1:3"),
   //s("bd bd*2 bd bd/2").gain(0.5),
-  s("[hh*2 hh hh*2 hh*2]"),
-  //s("cp").beat("8", 16)
-).orbit(2)._scope().lpf(5000)//.bank("RolandTR909")
+  s("[hh*2 hh hh*2 hh*2]").bank("RolandTR808").gain(1),
+  //s("cp").beat("16", 32).bank("RolandTR808")
+).orbit(2)._scope().lpf(5000)//.bank("RolandTR808")
 
 $bass: stack(
-  s("supersaw!16").note("<c#3 g#2 c#3 [f2 d#2]>").lpf(300).orbit(7),
-  s("supersaw!8").note("<c#2 g#1 c#2 [f1 d#1]>").lpf(300).gain(0.5),
+  s("supersaw!8").note("<c#3 g#2 c#3 [f2 d#2]>").lpf(300).orbit(7),
+  s("supersaw!16").note("<c#2 g#1 c#2 [f1 d#1]>").lpf(300).gain(1),
 )._pianoroll()
 $mel: stack(
-  note("<[d#6 d#6] [g#5 g5] [d#6 d#6 d#6 a#5] [b#5 a#5] [a#5 a#5 a#5 c6] [g#5 g5] [d#6 d#6] [g#5 g5] >").sound("sawtooth").lpf(350).orbit(7),
-  note("<[[d#4 c4] [a#4 a#4] [d#4 c4] [g4 g#4]]>").lpf(600).gain(0.5)
-)._pianoroll()
+  //note("<[d#6 d#6] [g#5 g5] [d#6 d#6 d#6 a#5] [b#5 a#5] [a#5 a#5 a#5 c6] [g#5 g5] [d#6 g6] [g#5 g5] >").sound("sawtooth").lpf(350).orbit(7),
+  note("<[[d#4 c4] [a#4 c4] [d#4 c4] [g4 g#4]]>").s("piano").lpf(250).gain(0.8)._scope(),
+  //change g#4 to *2, f5 d#5
+).room("<0 .2 .4 .6 .8 1>")._pianoroll()
+
+

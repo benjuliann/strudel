@@ -1,22 +1,18 @@
-link: https://strudel.cc/#c2V0Q3BtKDE2MC80KQoKJGRydW1zOiBzdGFjayAoCiAgcygiYmQgYmQgYmQgYmQqMiIpLmJhbmsoIlJvbGFuZFRSOTA5IikuZ2FpbigxKS5kdWNrb3JiaXQoIjE6MyIpLAogIC8vcygiYmQgYmQqMiBiZCBiZC8yIikuZ2FpbigwLjUpLAogIHMoIltoaCoyIGhoIGhoKjIgaGgqMl0iKS5iYW5rKCJSb2xhbmRUUjgwOCIpLmdhaW4oMSksCiAgLy9zKCJjcCIpLmJlYXQoIjE2IiwgMzIpLmJhbmsoIlJvbGFuZFRSODA4IikKKS5vcmJpdCgyKS5fc2NvcGUoKS5scGYoNTAwMCkvLy5iYW5rKCJSb2xhbmRUUjgwOCIpCgokYmFzczogc3RhY2soCiAgcygic3VwZXJzYXchOCIpLm5vdGUoIjxjIzMgZyMyIGMjMyBbZjIgZCMyXT4iKS5scGYoMzAwKS5vcmJpdCg3KSwKICBzKCJzdXBlcnNhdyExNiIpLm5vdGUoIjxjIzIgZyMxIGMjMiBbZjEgZCMxXT4iKS5scGYoMzAwKS5nYWluKDEpLAopLl9waWFub3JvbGwoKQokbWVsOiBzdGFjaygKICAvL25vdGUoIjxbZCM2IGQjNl0gW2cjNSBnNV0gW2QjNiBkIzYgZCM2IGEjNV0gW2IjNSBhIzVdIFthIzUgYSM1IGEjNSBjNl0gW2cjNSBnNV0gW2QjNiBnNl0gW2cjNSBnNV0gPiIpLnNvdW5kKCJzYXd0b290aCIpLmxwZigzNTApLm9yYml0KDcpLAogIG5vdGUoIjxbW2QjNCBjNF0gW2EjNCBjNF0gW2QjNCBjNF0gW2c0IGcjNF1dPiIpLnMoInBpYW5vIikubHBmKDI1MCkuZ2FpbigwLjgpLl9zY29wZSgpLAogIC8vY2hhbmdlIGcjNCB0byAqMiwgZjUgZCM1Cikucm9vbSgiPDAgLjIgLjQgLjYgLjggMT4iKS5fcGlhbm9yb2xsKCkKCgo%3D
+link: https://strudel.cc/#c2V0Q3BtKDE2MC80KQoKJGRydW1zOiBzdGFjayAoCiAgcygiYmQiKS5iZWF0KCIwLCA0LCA4LCAxMSwgMTQiLCAxNikuYmFuaygiUm9sYW5kVFI5MDkiKS5nYWluKDEpLmR1Y2tvcmJpdCgiMTozIiksCiAgLy9zKCJiZCBiZCBiZCBiZCoyIikuYmFuaygiUm9sYW5kVFI5MDkiKS5nYWluKDEpLmR1Y2tvcmJpdCgiMTozIiksCiAgcygiW2hoKjIgaGggaGgqMiBoaCoyXSIpLmJhbmsoIlJvbGFuZFRSODA4IikuZ2FpbigxKSwKKS5vcmJpdCgyKS5scGYoNTAwMCkuX3Njb3BlKCkKJGJhc3M6IHN0YWNrKAogIHMoInN1cGVyc2F3ITgiKS5ub3RlKCI8YyMzIGcjMiBjIzMgW2YyIGQjMl0%2BIikub3JiaXQoNyksCiAgcygic3VwZXJzYXchMTYiKS5ub3RlKCI8YyMyIGcjMSBjIzIgW2YxIGQjMV0%2BIikuZ2FpbigxKSwKKS5scGYoc2xpZGVyKDM4MiwgMTAwLCAyMDAwLCAxKSkuX3BpYW5vcm9sbCgpCiRtZWw6IHN0YWNrKAogIC8vbm90ZSgiPFtkIzYgZCM2XSBbZyM1IGc1XSBbZCM2IGQjNiBkIzYgYSM1XSBbYiM1IGEjNV0gW2EjNSBhIzUgYSM1IGM2XSBbZyM1IGc1XSBbZCM2IGc2XSBbZyM1IGc1XSA%2BIikuc291bmQoInNhd3Rvb3RoIikubHBmKDM1MCkub3JiaXQoNyksCiAgbm90ZSgiPFtbZCM0IGM0XSBbYSM0IGM0XSBbZCM0IGM0XSBbZzQgZyM0XV0%2BIikucygicGlhbm8iKS5scGYoMjUwKS5nYWluKDEpLAogIC8vY2hhbmdlIGcjNCB0byAqMiwgZjUgZCM1Cikucm9vbSgiPDAgLjIgLjQgLjYgLjggMT4iKS5fcGlhbm9yb2xsKCk%3D
 
 setCpm(160/4)
 
 $drums: stack (
-  s("bd bd bd bd*2").bank("RolandTR909").gain(1).duckorbit("1:3"),
-  //s("bd bd*2 bd bd/2").gain(0.5),
+  s("bd").beat("0, 4, 8, 11, 14", 16).bank("RolandTR909").gain(1).duckorbit("1:3"),
+  //s("bd bd bd bd*2").bank("RolandTR909").gain(1).duckorbit("1:3"),
   s("[hh*2 hh hh*2 hh*2]").bank("RolandTR808").gain(1),
-  //s("cp").beat("16", 32).bank("RolandTR808")
-).orbit(2)._scope().lpf(5000)//.bank("RolandTR808")
-
+).orbit(2).lpf(5000)._scope()
 $bass: stack(
-  s("supersaw!8").note("<c#3 g#2 c#3 [f2 d#2]>").lpf(300).orbit(7),
-  s("supersaw!16").note("<c#2 g#1 c#2 [f1 d#1]>").lpf(300).gain(1),
-)._pianoroll()
+  s("supersaw!8").note("<c#3 g#2 c#3 [f2 d#2]>").orbit(7),
+  s("supersaw!16").note("<c#2 g#1 c#2 [f1 d#1]>").gain(1),
+).lpf(slider(382, 100, 2000, 1))._pianoroll()
 $mel: stack(
   //note("<[d#6 d#6] [g#5 g5] [d#6 d#6 d#6 a#5] [b#5 a#5] [a#5 a#5 a#5 c6] [g#5 g5] [d#6 g6] [g#5 g5] >").sound("sawtooth").lpf(350).orbit(7),
-  note("<[[d#4 c4] [a#4 c4] [d#4 c4] [g4 g#4]]>").s("piano").lpf(250).gain(0.8)._scope(),
+  note("<[[d#4 c4] [a#4 c4] [d#4 c4] [g4 g#4]]>").s("piano").lpf(250).gain(1),
   //change g#4 to *2, f5 d#5
 ).room("<0 .2 .4 .6 .8 1>")._pianoroll()
-
-

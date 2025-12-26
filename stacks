@@ -1,0 +1,25 @@
+//benjulian
+//stacks
+//https://strudel.cc/#Ly9iZW5qdWxpYW4KLy9zdGFja3MKCnNldENwbSgxMzIvNCkKY29uc3QgZW5lcmd5ID0gc2xpZGVyKDEuMTcsIDAsIDEwKQoKJE1FTDogc3RhY2soCiAgbm90ZSgiPFthM0A0IGM0QDggZDRANCBnNEA4IGQ0QDhdIFthM0A0IGM0QDggZDRANCBnNEA4IGQ0QDhdIFtmM0A0IGEzQDggYzRANCBlNEA4IGM0QDhdIFtkM0A0IGYzQDggYzRANCBlNEA4IGczQDhdPiIpLAogIC8vbm90ZSgiPGI1IDxnNSBhNT4%2BIikuZ2FpbigwLjUpLmwKKS5fcGlhbm9yb2xsKCkKJFNZTlRIOiBzdGFjaygKICAgIG5vdGUoIjxbYjVAMiBiNSBiNV0qNCA8W2c1QDIgZzUgZzVdKjQgW2E1QDIgYTUgYTVdKjQ%2BPiIpLmdhaW4oMC42KSwKICAgIG5vdGUoIjxbZTVAMiBlNSBlNV0qNCA8W2Q1QDIgZDUgZDVdKjQgW2Q1QDIgYzUgYzVdKjQ%2BPiIpLmdhaW4oMC41KQopLmxwZihzbGlkZXIoMzAyOSwgMTAwLCA1MDAwLCAxKSkuX3BpYW5vcm9sbCgpCiRCQVNTOiBzdGFjaygKICBzKCJzcXVhcmUhOCIpLm5vdGUoIjxhMiBbZzIgYzJdIGYyIFtkMiBlMl0%2BIikuZ2FpbigxKSwKICBzKCJzcXVhcmUhMTYiKS5ub3RlKCI8YTEgW2cxIGMxXSBmMSBbZDEgZTFdPiIpLmdhaW4oMC44KSwKKS5scGYoc2xpZGVyKDYwMiwgMTAwLCAyMDAwLCAxKSkubHBlbnYoZW5lcmd5KS5fcGlhbm9yb2xsKCkKCiREUlVNUzogc3RhY2sgKAogIHMoImJkIikuYmVhdCgiMCwgNiwgMTAiLCAxNikuYmFuaygiUm9sYW5kVFI5MDkiKS5nYWluKDEpLmR1Y2tvcmJpdCgiMTozIiksCiAgcygiW2hoKjE2XSIpLmJhbmsoIlJvbGFuZFRSODA4IikuZ2FpbigwLjYpLAogIHMoImNwIikuYmVhdCgiMSwgMyIsIDQpLmJhbmsoIlJvbGFuZFRSOTA5IikuZ2FpbigxKQopLm9yYml0KDIpLmxwZig4MDAwKS5fc2NvcGUoKQo%3D
+
+setCpm(132/4)
+const energy = slider(1.17, 0, 10)
+
+$MEL: stack(
+  note("<[a3@4 c4@8 d4@4 g4@8 d4@8] [a3@4 c4@8 d4@4 g4@8 d4@8] [f3@4 a3@8 c4@4 e4@8 c4@8] [d3@4 f3@8 c4@4 e4@8 g3@8]>"),
+  //note("<b5 <g5 a5>>").gain(0.5).l
+)._pianoroll()
+$SYNTH: stack(
+    note("<[b5@2 b5 b5]*4 <[g5@2 g5 g5]*4 [a5@2 a5 a5]*4>>").gain(0.6),
+    note("<[e5@2 e5 e5]*4 <[d5@2 d5 d5]*4 [d5@2 c5 c5]*4>>").gain(0.5)
+).lpf(slider(3029, 100, 5000, 1))._pianoroll()
+$BASS: stack(
+  s("square!8").note("<a2 [g2 c2] f2 [d2 e2]>").gain(1),
+  s("square!16").note("<a1 [g1 c1] f1 [d1 e1]>").gain(0.8),
+).lpf(slider(602, 100, 2000, 1)).lpenv(energy)._pianoroll()
+
+$DRUMS: stack (
+  s("bd").beat("0, 6, 10", 16).bank("RolandTR909").gain(1).duckorbit("1:3"),
+  s("[hh*16]").bank("RolandTR808").gain(0.6),
+  s("cp").beat("1, 3", 4).bank("RolandTR909").gain(1)
+).orbit(2).lpf(8000)._scope()

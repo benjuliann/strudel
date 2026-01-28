@@ -15,8 +15,9 @@ $SYNTH: stack(
   note("<[g#3 g#3 g#3 a3 a3 a3 a3 [a3 b3]]>"),
 ).s("saw").tremsync(8).tremolodepth("2").tremoloskew(".5")._pianoroll()
 
+//supersaw, square
 $BASS: stack(
-  note("<[g#1 g#1 g#1 a1 a1 a1 a1 [a1 b1]]>").s("square").lpf(slider(300, 300, 1000)),
+  note("<[g#1 g#1 g#1 a1 a1 a1 a1 [a1 b1]]>").s("square").lpf(slider(300, 300, 10000)),
   note("<[g#2@3 a2@4 b2]>").s("sine"),
   note("<[g#1@3 a1@4 b1]>").s("sine").gain(1.5)
 )._scope()

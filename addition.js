@@ -45,3 +45,6 @@ $KICK: stack (
   s("drums").beat("0, 2, 7, 8, 10, 13, 15", 16).slow(2).gain(1).duckorbit(2).duckattack("<0.1>").duckdepth(1),
   //s("sd").beat("4, 7, 9, 12, 14", 16).bank("emudrumulator").transpose(3),
 )
+
+
+
